@@ -24,6 +24,8 @@ const obtenerProductos = async(req, res = response ) => {
 
 const obtenerProducto = async(req, res = response ) => {
 
+    console.log("probando consola")
+
     const { id } = req.params;
     const producto = await Producto.findById( id )
                             .populate('usuario', 'nombre')
