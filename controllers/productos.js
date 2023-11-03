@@ -15,7 +15,7 @@ const obtenerProductos = async(req, res = response ) => {
             .skip( Number( desde ) )
             .limit(Number( limite ))
     ]);
-    console.log("probando consola2")
+
     res.json({
         total,
         productos
@@ -24,7 +24,6 @@ const obtenerProductos = async(req, res = response ) => {
 
 const obtenerProducto = async(req, res = response ) => {
 
-    console.log("probando consola")
 
     const { id } = req.params;
     const producto = await Producto.findById( id )
